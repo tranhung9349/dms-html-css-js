@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/boostrap/bootstrap.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/public/fontawesome/all.min.css"/>
+    <link rel="stylesheet" href="/dns-component/layout/layout.css" />
+    <link rel="stylesheet" href="/dns-component/css/module.css"/>
+    <link rel="stylesheet" href="/dns-component/css/custom.css"/>
+    <link rel="stylesheet" href="/dns-component/css/variable.css"/>
+    <title>DMS</title>
+</head>
+<body>
+    <main class="main-layout">
+        <section class="side-bar" id="side-bar">
+          <!-- <span class="toggle-btn" id="toggle-btn"><i class='bx bx-menu' id="header-toggle"></i></span> -->
+          <div class="group-menu flex-shrink-0 p-3 mt-5" style="width: 300px;">
+          <div class="d-flex align-items-center ms-0 active">
+            <i class='bx bx-file'></i>
+            <span class="mx-3">DNS</span>
+          </div>
+  
+          <div class="my-3 group-menu-items">
+            <div class="menu-item-active">
+              <a href="#" class="group-menu-item">Quản lý văn bản </a>
+            </div>
+          </div>
+           
+          <div class="my-3 group-menu-items">
+          <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#systems-collapse" aria-expanded="false" role="button" aria-controls="systems-collapse">
+            Hệ thống
+          </div>
+          <div class="collapse ml-2" id="systems-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+              <li class="my-3 menu-item-active"><a href="#" class="group-menu-item rounded">Khai báo tham số</a></li>
+              <li class="my-3"><a href="#" class="group-menu-item rounded">Quản trị người dùng</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="my-3 group-menu-items">
+        <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#dictionary-collapse" aria-expanded="false" role="button" aria-controls="dictionary-collapse">
+          Từ điển
+        </div>
+        <div class="collapse ml-2" id="dictionary-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nhóm người dùng</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Chức danh</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Nơi gửi /nhận văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Phòng ban chức danh</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Luồng chuyển văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Số văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Loại văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Người ký</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Mức độ khẩn</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục Uỷ quyền</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="my-3 group-menu-items">
+        <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#document-collapse" aria-expanded="false" role="button" aria-controls="document-collapse">
+          Văn bản
+        </div>
+        <div class="collapse ml-2" id="document-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo văn bản đến</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo văn bản đi</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tạo dự thảo văn bản đi</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Danh mục uỷ quyền xử lý văn bản</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã gửi</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Tra cứu văn bản LVP đã nhận</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="my-3 group-menu-items">
+        <div class="btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#report-collapse" aria-expanded="false" role="button" aria-controls="report-collapse">
+          Báo cáo
+        </div>
+        <div class="collapse ml-2" id="report-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal small mb-0">
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Báo cáo văn bản - Administrator</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Báo cáo văn bản - Văn thư</a></li>
+            <li class="my-3"><a href="#" class="group-menu-item rounded">Báo cáo văn bản - Người dùng</a></li>
+          </ul>
+        </div>
+      </div>
+        
+  
+        </section>
+        <section class="main-container">
+          <span class="toggle-btn" id="toggle-action"><i class='bx bx-menu' id="header-toggle"></i></span>
+          <!--Tab -->
+            <div class="w-100">
+                <div class="d-flex align-items-center justify-content-between w-100 my-3">
+                    <ul class="nav nav-tabs" id="ex1" role="tablist">
+                        <li class="nav-item">
+                          <span class="nav-link active" 
+                            aria-current="page" 
+                            href="#ex1-tabs-1"
+                            id="ex1-tab-1"
+                            data-bs-toggle="tab"
+                            role="tab"
+                            aria-controls="ex1-tabs-1"
+                            aria-selected="true"
+                        >Văn bản nội bộ
+                        <span class="badge rounded-pill ms-1">14</span>
+                    </span>
+                        </li>
+                        <li class="nav-item">
+                          <span 
+                          class="nav-link"
+                          id="ex1-tab-2"
+                          data-bs-toggle="tab"
+                          href="#ex1-tabs-2"
+                          role="tab"
+                          aria-controls="ex1-tabs-2"
+                          aria-selected="false"
+                          >Văn bản liên văn phòng
+                          <span class="badge rounded-pill ms-1">14</span>
+                        </span>
+                        </li>
+                      </ul>      
+                </div>
+                <!--Tab Content-->
+                <div class="tab-content" id="ex1-content">
+                    <!--Tab 1 Content-->
+                    <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <button type="button" class="btn btn-outline-primary me-2"
+                                    data-bs-toggle="modal" data-bs-target="#moveDocument"
+                                ><i class="far fa-sync-alt me-2"></i>Chuyển văn bản</button>
+                                <button type="button" class="btn btn-outline-primary me-2"
+                                    data-bs-toggle="modal" data-bs-target="#doneDoc"
+                                ><i class="fa-regular fa-square-xmark me-2"></i>Kết thúc</button>
+                                <input type="text" class="form-control search-input" placeholder="Nhập từ khoá tìm kiếm">
+                                <button type="button" class="btn btn-link"><i class="fa-solid fa-bars"></i></button>
+                            </div>
+                        </div>
+                        
+                      <!--Table-->
+                    <div class="table-responsive ">
+                        <table class="table table-striped w-auto" id="internalDocList">
+                            <thead class="table-light ">
+                                <tr>
+                                    <th scope="col" style="max-width: 35px;"></th>
+                                    <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Số văn bản <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Số kí hiệu <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Trích yếu <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Nơi gửi <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Ngày văn bản <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Hạn xử lý <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Hình thức xử lý <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Đơn vị chủ trì <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Loại công văn <i class="fa-solid fa-sort"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row"><input type="checkbox"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row"><input type="checkbox"/></td>
+                                    <td>3</td>
+                                    <td>30/7/2022</td>
+                                    <td><a href="#">1231/fgd</a></td>
+                                    <td>PAGD23000204</td>
+                                    <td>Hà Nội</td>
+                                    <td>12/12/2023</td>
+                                    <td>12/12/2023</td>
+                                    <td>Chủ trì</td>
+                                    <td>Công ty </td>
+                                    <td>VĂN BẢN DỰ THẢO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Pagination-->
+                    <div class="d-flex justify-content-end mt-4">
+                        <div class="d-flex">
+                            <div class="me-2">
+                                <select class="form-select form-select-md">
+                                    <option>10/ trang</option>
+                                </select>
+                            </div>
+                            <nav aria-label="...">
+                                <ul class="pagination">
+                                  <li class="page-item disabled">
+                                    <a class="page-link"><i class="fa-regular fa-angles-left"></i></a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fa-regular fa-angles-right"></i></a>
+                                  </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>  
+                </div>
+                <!--Tab 2 Content-->
+                <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                      <!--Table-->
+                      <div class="d-flex justify-content-end">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <button type="button" class="btn btn-outline-primary me-2"
+                                data-bs-toggle="modal" data-bs-target="#acceptDoc"
+                            ><i class="far fa-sync-alt me-2"></i>Đồng ý nhận</button>
+                            <button type="button" class="btn btn-outline-primary me-2"
+                            data-bs-toggle="modal" data-bs-target="#declineReceive"
+                            ><i class="fa-regular fa-square-xmark me-2"></i>Từ chối nhận</button>
+                            <input type="text" class="form-control search-input" placeholder="Nhập từ khoá tìm kiếm">
+                            <button type="button" class="btn btn-link"><i class="fa-solid fa-bars"></i></button>
+                        </div>
+                    </div>
+                    <div class="table-responsive ">
+                        <table class="table table-striped w-auto" id="externalDocList">
+                            <thead class="table-light ">
+                                <tr>
+                                    <th scope="col" style="max-width: 35px;"></th>
+                                    <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Số đến <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Số kí hiệu <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Trích yếu <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Nơi gửi <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Ngày văn bản <i class="fa-solid fa-sort"></i></th>
+                                    <th scope="col">Loại công văn <i class="fa-solid fa-sort"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row"><input type="checkbox"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                    <td scope="col"><input type="text"/></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row"><input type="checkbox"/></td>
+                                    <td>3</td>
+                                    <td>12</td>
+                                    <td><a href="#">1231/fgd</a></td>
+                                    <td>PAGD23000204</td>
+                                    <td>Hà Nội</td>
+                                    <td>12/12/2023</td>
+                                    <td>VĂN BẢN DỰ THẢO</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Pagination-->
+                    <div class="d-flex justify-content-end mt-4">
+                        <div class="d-flex">
+                            <div class="me-2">
+                                <select class="form-select form-select-md">
+                                    <option>10/ trang</option>
+                                </select>
+                            </div>
+                            <nav aria-label="...">
+                                <ul class="pagination">
+                                  <li class="page-item disabled">
+                                    <a class="page-link"><i class="fa-regular fa-angles-left"></i></a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fa-regular fa-angles-right"></i></a>
+                                  </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </section>
+        <!--Modal Chuyen van ban-->          
+        <div class="modal fade" id="moveDocument" tabindex="-1" aria-labelledby="moveDocumentLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Chuyển văn bản</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--Modal Tu choi nhan-->          
+        <div class="modal fade" id="declineReceive" tabindex="-1" aria-labelledby="cancelReceiveDocLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Từ chối nhận</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        Quý vị có muốn từ chối nhận những văn bản đã chọn hay không?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-2"></i> Huỷ</button>
+                <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-2"></i> Đồng ý</button>
+                </div>
+            </div>
+            </div>
+        </div>
+         <!--Modal Ket thuc-->          
+         <div class="modal fade" id="doneDoc" tabindex="-1" aria-labelledby="doneDocDocLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Kết thúc</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        Quý vị có muốn kết thúc những văn bản đã chọn hay không?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-2"></i> Huỷ</button>
+                <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-2"></i> Đồng ý</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!--Modal Ket thuc-->          
+        <div class="modal fade" id="acceptDoc" tabindex="-1" aria-labelledby="acceptDocLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Đồng ý nhận</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        Quý vị có muốn nhận những văn bản đã chọn hay không?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-2"></i> Huỷ</button>
+                <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-2"></i> Đồng ý</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--Modal xem van ban noi bo-->
+        <div class="modal fade" id="internalDocViewModal" tabindex="-1" aria-labelledby="internalDocLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Xem văn bản dự thảo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--Tab -->
+                <div class="modal-body">
+                    <div class="w-100">
+                        <div class="d-flex align-items-center justify-content-between w-100 my-3">
+                            <ul class="nav nav-tabs" id="ex1" role="tablist">
+                                <li class="nav-item">
+                                  <span class="nav-link active" 
+                                    aria-current="page" 
+                                    href="#internal-doc-tab-1"
+                                    id="ex2-tab-1"
+                                    data-bs-toggle="tab"
+                                    role="tab"
+                                    aria-controls="internal-doc-tab-1"
+                                    aria-selected="true"
+                                >Thông tin văn bản</span>
+                                </li>
+                                <li class="nav-item">
+                                  <span 
+                                  class="nav-link"
+                                  id="ex2-tab-2"
+                                  data-bs-toggle="tab"
+                                  href="#internal-doc-tab-2"
+                                  role="tab"
+                                  aria-controls="internal-doc-tab-2"
+                                  aria-selected="false"
+                                  >Lịch sử trao đổi</span>
+                                </li>
+                              </ul>      
+                        </div>
+                        <!--Tab Content-->
+                        <div class="tab-content" id="ex2-content">
+                            <!--Tab 1 Content-->
+                            <div class="tab-pane fade show active" id="internal-doc-tab-1" role="tabpanel" aria-labelledby="internal-doc-tab-1">
+                                <div class="mt-2">
+                                    <div class="category-label">Thông tin chung</div>
+                                    <div class="container mt-3">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Số dự thảo</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Số văn bản dự thảo</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Ngày dự thảo</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Hạn xử lý</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Số trang</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Trích yếu</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Nơi nhận văn bản</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Ký hiệu văn bản</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Người ký văn bản</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Độ khẩn</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <div class="category-label">Tài liệu đính kèm</div> 
+                                    <div class="mt-3">
+                                        <div class="table-responsive ">
+                                            <table class="table w-auto">
+                                                <thead class="table-light ">
+                                                    <tr>
+                                                        <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
+                                                        <th scope="col">Tên tệp <i class="fa-solid fa-sort"></i></th>
+                                                        <th scope="col">Kích thước <i class="fa-solid fa-sort"></i></th>
+                                                        <th scope="col">Ngày cập nhật cuối<i class="fa-solid fa-sort"></i></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row"><input type="text"/></td>
+                                                        <td scope="col"><input type="text"/></td>
+                                                        <td scope="col"><input type="text"/></td>
+                                                        <td scope="col"><input type="text"/></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><a href="#">Tai lieu Bao cao giam dinh.docx</a></td>
+                                                        <td>100kb</td>
+                                                        <td>12/12/2022</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <div class="category-label">Thông tin chuyển hoặc kết thúc văn bản</div> 
+                                    <div class="mt-3">
+                                        <textarea class="form-control" placeholder="Người ký văn bản" id="floatingTextarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Tab 2 Content-->
+                            <div class="tab-pane fade" id="internal-doc-tab-2" role="tabpanel" aria-labelledby="internal-doc-tab-2">
+
+                                <div class="mt-2">
+                                    <div class="category-label">Lịch sử trao đổi</div> 
+                                    <div class="mt-3">
+                                        <ol class="timeline">
+                                            <li> 
+                                                <div class="d-flex align-items-center">
+                                                    <span>
+                                                        <span class="">Đã chuyển</span> 
+                                                        (08:20:25 20/06/2023)
+                                                    </span>
+                                                    <span class="ms-2">
+                                                        <input type="checkbox" class="form-checkbox"/> Hiệu lực
+                                                    </span>
+                                                </div> 
+                                                <div class="d-flex flex-column">
+                                                    <span class="text-secondary-color">Người chuyển: <span class="text-primary-color fw-medium"> Nguyễn Hồng Diệp </span></span>
+                                                    <span class="text-secondary-color">Người nhận: <span class="text-primary-color fw-medium"> Tam, Nguyen Vu (BH-KHTT) (Giám đốc Ban)</span></span>
+                                                    <span class="text-secondary-color">Vai trò nhận: <span class="text-primary-color fw-medium"> Chủ trì </span></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <span>
+                                                        <span class="">Đã chuyển</span> 
+                                                        (08:20:25 20/06/2023)
+                                                    </span>
+                                                    <span class="ms-2">
+                                                        <input type="checkbox" class="form-checkbox"/> Hiệu lực
+                                                    </span>
+                                                </div> 
+                                                <div class="d-flex flex-column">
+                                                    <span class="text-secondary-color">Người chuyển: <span class="text-primary-color fw-medium"> Nguyễn Hồng Diệp </span></span>
+                                                    <span class="text-secondary-color">Người nhận: <span class="text-primary-color fw-medium"> Tam, Nguyen Vu (BH-KHTT) (Giám đốc Ban)</span></span>
+                                                    <span class="text-secondary-color">Vai trò nhận: <span class="text-primary-color fw-medium"> Chủ trì </span></span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <span>
+                                                        <span class="">Chưa xử lý</span> 
+                                                        (08:20:25 20/06/2023)
+                                                    </span>
+                                                    <span class="ms-2">
+                                                        <input type="checkbox" class="form-checkbox"/> Hiệu lực
+                                                    </span>
+                                                </div> 
+                                                <div class="d-flex flex-column">
+                                                    <span class="text-secondary-color">Người chuyển: <span class="text-primary-color fw-medium"> Nguyễn Hồng Diệp </span></span>
+                                                    <span class="text-secondary-color">Người nhận: <span class="text-primary-color fw-medium"> Tam, Nguyen Vu (BH-KHTT) (Giám đốc Ban)</span></span>
+                                                    <span class="text-secondary-color">Vai trò nhận: <span class="text-primary-color fw-medium"> Chủ trì </span></span>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-2">
+                                    <div class="category-label">Thông tin xử lý</div> 
+                                    <div class="mt-3">
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-1"></i> Huỷ</button>
+                    <button type="button" class="btn btn-success"><i class="fa-regular fa-rotate-right me-1"></i> Trả lại </button>
+                    <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-1"></i> Xác nhận </button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--Modal xem van ban lien phong-->
+        <div class="modal fade" id="externalDocViewModal" tabindex="-1" aria-labelledby="externalDocLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Xem văn bản liên phòng</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--Tab -->
+                <div class="modal-body">
+                    <div class="w-100">
+                        <div class="d-flex align-items-center justify-content-between w-100 my-3">
+                            <ul class="nav nav-tabs" id="ex1" role="tablist">
+                                <li class="nav-item">
+                                  <span class="nav-link active" 
+                                    aria-current="page" 
+                                    href="#external-doc-tab-1"
+                                    id="ex2-tab-1"
+                                    data-bs-toggle="tab"
+                                    role="tab"
+                                    aria-controls="external-doc-tab-1"
+                                    aria-selected="true"
+                                >Thông tin văn bản</span>
+                                </li>
+                                <li class="nav-item">
+                                  <span 
+                                  class="nav-link"
+                                  id="ex2-tab-2"
+                                  data-bs-toggle="tab"
+                                  href="#external-doc-tab-2"
+                                  role="tab"
+                                  aria-controls="external-doc-tab-2"
+                                  aria-selected="false"
+                                  >Danh sách chuyển văn bản</span>
+                                </li>
+                              </ul>      
+                        </div>
+                        <!--Tab Content-->
+                        <div class="tab-content" id="ex2-content">
+                            <!--Tab 1 Content-->
+                            <div class="tab-pane fade show active" id="external-doc-tab-1" role="tabpanel" aria-labelledby="external-doc-tab-1">
+                                <div class="mt-2">
+                                    <div class="category-label">Thông tin chung</div>
+                                    <div class="container mt-3">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Số văn bản</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Số văn bản dự đến</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Ngày đến</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Hạn xử lý</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Loại văn bản</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Số tờ</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Trích yếu</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Nơi gửi</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Nơi gửi ngoài danh sách</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Ký hiệu văn bản</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Ngày văn bản</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <label for="exampleFormControlInput1" class="form-label">Độ khẩn</label>
+                                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="category-label">Tài liệu đính kèm</div> 
+                                        <div class="d-flex gap-2">
+                                            <button type="button" class="btn btn-outline-secondary"><i class="fa-light fa-scanner-touchscreen me-1"></i> Quét văn bản</button>
+                                            <button type="button" class="btn btn-outline-secondary"><i class="fa-regular fa-download me-1"></i> Tải văn bản</button>
+                                        </div>    
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                        <div class="table-responsive ">
+                                            <table class="table w-auto">
+                                                <thead class="table-light ">
+                                                    <tr>
+                                                        <th scope="col">STT <i class="fa-solid fa-sort"></i></th>
+                                                        <th scope="col">Tên tệp <i class="fa-solid fa-sort"></i></th>
+                                                        <th scope="col">Kích thước <i class="fa-solid fa-sort"></i></th>
+                                                        <th scope="col">Ngày cập nhật cuối<i class="fa-solid fa-sort"></i></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row"><input type="text"/></td>
+                                                        <td scope="col"><input type="text"/></td>
+                                                        <td scope="col"><input type="text"/></td>
+                                                        <td scope="col"><input type="text"/></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><a href="#">Tai lieu Bao cao giam dinh.docx</a></td>
+                                                        <td>100kb</td>
+                                                        <td>12/12/2022</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--Tab 2 Content-->
+                            <div class="tab-pane fade" id="external-doc-tab-2" role="tabpanel" aria-labelledby="external-doc-tab-2">
+
+                                <div class="mt-2">
+                                    <div class="category-label">Thông tin xử lý</div> 
+                                    <div class="mt-3">
+                                        <input class="form-control" type="text" placeholder="Ký hiệu văn bản"/>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"><i class="fa-regular fa-x me-1"></i> Huỷ</button>
+                    <button type="button" class="btn btn-success"><i class="fa-regular fa-rotate-right me-1"></i> Trả lại </button>
+                    <button type="button" class="btn btn-primary"><i class="fa-regular fa-check me-1"></i> Xác nhận </button>
+                </div>
+            </div>
+            </div>
+        </div>
+      </main>
+    <script defer src="/dns-component/layout/layout.js"></script>
+    <script src="/public/boostrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Trigger doubleClick to row-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const rows = document.querySelectorAll("#internalDocList tr td");
+          rows.forEach(row => {
+            row.addEventListener("dblclick", () => {
+                let internalDocViewModal = new bootstrap.Modal(document.getElementById("internalDocViewModal"), {});
+                console.log(internalDocViewModal)
+                internalDocViewModal.show();
+            });
+          });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          const rows = document.querySelectorAll("#externalDocList tr td");
+          rows.forEach(row => {
+            row.addEventListener("dblclick", () => {
+                let internalDocViewModal = new bootstrap.Modal(document.getElementById("externalDocViewModal"), {});
+                console.log(internalDocViewModal)
+                internalDocViewModal.show();
+            });
+          });
+        });
+    </script>
+</body>
+</html>
