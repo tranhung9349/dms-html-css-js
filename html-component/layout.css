@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+
+.bx {
+    font-size: 24px;
+}
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #1B7CC2;
+    /* --first-color-light: #fff; */
+    --white-color: #fff;
+    --body-font: 'Roboto', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {}
+
+
+.main-layout {
+    width: 100vw;
+    height: 100vh;
+    background: var(--first-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.side-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: inherit;
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
+.main-container {
+    position: absolute;
+    right: 0;
+    height: 99%;
+    width: 95%;
+    border-radius: 12px;
+    background: #FFF;
+    flex-grow: 0.9;
+    margin: 16px 8px 16px 0;
+    padding: 12px;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: start;
+    z-index: 1;
+}
+
+.side-bar.expand+.main-container {
+    width: 80%;
+}
+
+
+
+.toggle-btn {
+    position: absolute;
+    left: -1.5%;
+    top: 1%;
+    border-radius: 50%;
+    padding: 4px 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    background: var(--white-color);
+    box-sizing: border-box;
+}
+
+.btn-toggle {
+    display: flex;
+    align-items: center;
+}
+.btn-toggle::after {
+    color: var(--white-color);
+    margin-left: 8px;
+    line-height: 0;
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    transition: transform .35s ease;
+    transform-origin: .5em 50%;
+    display: inline-block;
+}
+
+.btn-toggle[aria-expanded="true"] {
+    /* color: rgba(0, 0, 0, .85); */
+    color: var(--white-color);
+}
+
+.btn-toggle[aria-expanded="true"]::after {
+    transform: rotate(90deg);
+}
+
+.btn-toggle-nav>li {
+    margin: 8px;
+}
+
+a.group-menu-item {
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 0;
+    margin: 8px 0;
+    
+}
+.group-menu-items {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.side-bar.expand .group-menu-items {
+    display: block;
+}
